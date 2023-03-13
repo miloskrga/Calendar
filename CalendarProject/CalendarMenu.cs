@@ -28,7 +28,6 @@ namespace CalendarProject
                 Console.WriteLine("1. See Calendar");
                 Console.WriteLine("2. See Event");
                 Console.WriteLine("3. Add Event");
-               // Console.WriteLine("4. See");
                 Console.WriteLine("0. Logout");
                 Console.WriteLine("Enter number:");
                 option = calendarApp.ParseUserInput();
@@ -45,9 +44,6 @@ namespace CalendarProject
                     case 3:
                         AddEvent();
                         break;
-                    //case 4:
-                    //    See();
-                    //    break;
                     case 0:
                         Logout();
                         return;
@@ -59,41 +55,6 @@ namespace CalendarProject
                 }
             }
         }
-
-        //public void See()
-        //{
-        //    Console.Clear();
-        //    int month, year;
-        //    Console.WriteLine("Write year:");
-        //    year = ParseDateInput();
-        //    Console.WriteLine("Write month:");
-        //    month = ParseDateInput();
-
-
-        //    List<int> eventDates = new List<int>();
-        //    Database database = new Database();
-        //    eventDates = database.EventDates(month, year, user);
-
-        //    Console.WriteLine("First\n");
-        //    Thread.Sleep(1000);
-        //    //foreach (int a in eventDates)
-        //    //{
-        //    //    Console.WriteLine(a);
-        //    //    Thread.Sleep(1000);
-        //    //}
-        //    int[] _array = eventDates.ToArray();
-
-        //   // Console.WriteLine("Second");
-        //   // Console.WriteLine(_array[0]);
-        //    //Thread.Sleep(1000);
-        //    for (int j = 0; j < _array.Length ; j++)
-        //    {
-        //        Console.WriteLine("Petlja\n");
-        //        Thread.Sleep(1000);
-        //        Console.Write(_array[j] + "  ");
-        //        Thread.Sleep(1000);
-        //    }
-        //}
 
         public int ParseDateInput()
         {
@@ -153,7 +114,6 @@ namespace CalendarProject
                 {
                     case 1:
                         Console.WriteLine("Enter number of Event: ");
-                        //n =Convert.ToInt32(Console.ReadLine());//ovde moze da pukne
                         n = ParseDateInput();
                         DeleteEvent(events, n);
                         break;
@@ -174,7 +134,7 @@ namespace CalendarProject
             string location;
             string dateTime;
             string description;
-            DateTime dateParse= DateTime.Now;//rezultat konverzija
+            DateTime dateParse= DateTime.Now;
             Console.Clear();
             Console.WriteLine("Enter Title of Event:");
             title=Console.ReadLine();
